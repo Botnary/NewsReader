@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+   IBOutlet UIProgressView * progress;
+}
+@property (retain) UIProgressView *progress;
 
+-(void)updateProgress:(float)theIndex;
 @end
