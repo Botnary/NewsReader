@@ -97,6 +97,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E426EF216C360CE000133BA /* ShowItem */ = {
+			isa = PBXGroup;
+			children = (
+				2E426EED16C34EE1000133BA /* ShowItemViewController.h */,
+				2E426EEE16C34EE1000133BA /* ShowItemViewController.m */,
+				2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */,
+			);
+			name = ShowItem;
+			sourceTree = "<group>";
+		};
+		2E426EF316C360EB000133BA /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				2E426EDF16C3427F000133BA /* NewsListViewController.h */,
+				2E426EE016C3427F000133BA /* NewsListViewController.m */,
+				2E426EE116C3427F000133BA /* NewsListViewController.xib */,
+			);
+			name = NewsList;
+			sourceTree = "<group>";
+		};
 		2EDE1EA916C1CB5500B108C8 = {
 			isa = PBXGroup;
 			children = (
@@ -136,13 +156,9 @@
 				2E426ED816C3386A000133BA /* NewsItem.m */,
 				2EDE1ED016C1CB5600B108C8 /* MainStoryboard.storyboard */,
 				2EDE1ED316C1CB5600B108C8 /* ViewController.h */,
+				2E426EF216C360CE000133BA /* ShowItem */,
 				2EDE1ED416C1CB5600B108C8 /* ViewController.m */,
-				2E426EDF16C3427F000133BA /* NewsListViewController.h */,
-				2E426EED16C34EE1000133BA /* ShowItemViewController.h */,
-				2E426EEE16C34EE1000133BA /* ShowItemViewController.m */,
-				2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */,
-				2E426EE016C3427F000133BA /* NewsListViewController.m */,
-				2E426EE116C3427F000133BA /* NewsListViewController.xib */,
+				2E426EF316C360EB000133BA /* NewsList */,
 				2EDE1EBF16C1CB5500B108C8 /* Supporting Files */,
 			);
 			path = NewsReader;
