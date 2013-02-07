@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#include "ViewController.h"
 
 @implementation AppDelegate
 
@@ -42,11 +43,20 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle: @"Announcement"
+                          message: @"It turns out that you are playing Addicus!"
+                          delegate: nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 @end
