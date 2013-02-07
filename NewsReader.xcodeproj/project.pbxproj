@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E426ED916C3386A000133BA /* NewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426ED816C3386A000133BA /* NewsItem.m */; };
+		2E426EE216C3427F000133BA /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426EE016C3427F000133BA /* NewsListViewController.m */; };
+		2E426EE316C3427F000133BA /* NewsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E426EE116C3427F000133BA /* NewsListViewController.xib */; };
+		2E426EF016C34EE1000133BA /* ShowItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426EEE16C34EE1000133BA /* ShowItemViewController.m */; };
+		2E426EF116C34EE1000133BA /* ShowItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */; };
 		2EDE1EB916C1CB5500B108C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDE1EB816C1CB5500B108C8 /* UIKit.framework */; };
 		2EDE1EBB16C1CB5500B108C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDE1EBA16C1CB5500B108C8 /* Foundation.framework */; };
 		2EDE1EBD16C1CB5500B108C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDE1EBC16C1CB5500B108C8 /* CoreGraphics.framework */; };
@@ -36,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E426ED716C3386A000133BA /* NewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItem.h; sourceTree = "<group>"; };
+		2E426ED816C3386A000133BA /* NewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItem.m; sourceTree = "<group>"; };
+		2E426EDF16C3427F000133BA /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		2E426EE016C3427F000133BA /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		2E426EE116C3427F000133BA /* NewsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsListViewController.xib; sourceTree = "<group>"; };
+		2E426EED16C34EE1000133BA /* ShowItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowItemViewController.h; sourceTree = "<group>"; };
+		2E426EEE16C34EE1000133BA /* ShowItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowItemViewController.m; sourceTree = "<group>"; };
+		2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowItemViewController.xib; sourceTree = "<group>"; };
 		2EDE1EB416C1CB5500B108C8 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDE1EB816C1CB5500B108C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2EDE1EBA16C1CB5500B108C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,9 +132,17 @@
 			children = (
 				2EDE1EC716C1CB5500B108C8 /* AppDelegate.h */,
 				2EDE1EC816C1CB5500B108C8 /* AppDelegate.m */,
+				2E426ED716C3386A000133BA /* NewsItem.h */,
+				2E426ED816C3386A000133BA /* NewsItem.m */,
 				2EDE1ED016C1CB5600B108C8 /* MainStoryboard.storyboard */,
 				2EDE1ED316C1CB5600B108C8 /* ViewController.h */,
 				2EDE1ED416C1CB5600B108C8 /* ViewController.m */,
+				2E426EDF16C3427F000133BA /* NewsListViewController.h */,
+				2E426EED16C34EE1000133BA /* ShowItemViewController.h */,
+				2E426EEE16C34EE1000133BA /* ShowItemViewController.m */,
+				2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */,
+				2E426EE016C3427F000133BA /* NewsListViewController.m */,
+				2E426EE116C3427F000133BA /* NewsListViewController.xib */,
 				2EDE1EBF16C1CB5500B108C8 /* Supporting Files */,
 			);
 			path = NewsReader;
@@ -236,6 +257,8 @@
 				2EDE1ECD16C1CB5600B108C8 /* Default@2x.png in Resources */,
 				2EDE1ECF16C1CB5600B108C8 /* Default-568h@2x.png in Resources */,
 				2EDE1ED216C1CB5600B108C8 /* MainStoryboard.storyboard in Resources */,
+				2E426EE316C3427F000133BA /* NewsListViewController.xib in Resources */,
+				2E426EF116C34EE1000133BA /* ShowItemViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +296,9 @@
 				2EDE1EC516C1CB5500B108C8 /* main.m in Sources */,
 				2EDE1EC916C1CB5500B108C8 /* AppDelegate.m in Sources */,
 				2EDE1ED516C1CB5600B108C8 /* ViewController.m in Sources */,
+				2E426ED916C3386A000133BA /* NewsItem.m in Sources */,
+				2E426EE216C3427F000133BA /* NewsListViewController.m in Sources */,
+				2E426EF016C34EE1000133BA /* ShowItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

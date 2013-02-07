@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #include "ViewController.h"
+#include "NewsListViewController.h"
 
 @implementation AppDelegate
 
@@ -43,14 +44,16 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"Announcement"
-                          message: @"It turns out that you are playing Addicus!"
-                          delegate: nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil];
-    [alert show];
-    [alert release];
+//    UIAlertView *alert = [[UIAlertView alloc]
+//                          initWithTitle: @"Announcement"
+//                          message: @"It turns out that you are playing Addicus!"
+//                          delegate: nil
+//                          cancelButtonTitle:@"OK"
+//                          otherButtonTitles:nil];
+//    [alert show];
+//    [alert release];
+    NewsListViewController *nsList = [[NewsListViewController alloc]init];
+    [[self window]addSubview:[nsList view]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
