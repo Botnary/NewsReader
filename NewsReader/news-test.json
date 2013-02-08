@@ -1,0 +1,32 @@
+{
+    "news":[
+            {
+            "item":{
+            "headline":"Removing senators a difficult task under the Constitution",
+            "description":"Removing senators a difficult task under the Constitution 1",
+            "content":"Removing senators a difficult task under the Constitution 1"
+            }
+            },
+            {
+            "item":{
+            "name":"System failed 11-year-old shocked by police Taser in B.C.: report",
+            "description":"Removing senators a difficult task under the Constitution 2",
+            "content":"Removing senators a difficult task under the Constitution 2"
+            }
+            },
+            {
+            "item":{
+            "name":"Manhunt on for fired L.A. cop accused of killing 3 people, including officer",
+            "description":"Removing senators a difficult task under the Constitution 3",
+            "content":"Removing senators a difficult task under the Constitution 3"
+            }
+            },
+            {
+            "item":{
+            "name":"Deer named Bambi, raised by Hutterites, shot by wildlife officers",
+            "description":"Removing senators a difficult task under the Constitution 4",
+            "content":"Removing senators a difficult task under the Constitution 4"
+            }
+            }
+            ]
+}

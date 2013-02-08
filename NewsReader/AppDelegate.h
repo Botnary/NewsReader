@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "NewsJSON.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    NSTimer * myTimer;
+    NewsJSON *jsonReader;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong,nonatomic) NSTimer *myTimer;
+@property (strong,nonatomic) NewsJSON *jsonReader;
 
 @end

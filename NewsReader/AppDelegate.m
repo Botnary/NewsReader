@@ -11,6 +11,7 @@
 #include "NewsListViewController.h"
 
 @implementation AppDelegate
+@synthesize myTimer,jsonReader;
 
 - (void)dealloc
 {
@@ -52,8 +53,30 @@
 //                          otherButtonTitles:nil];
 //    [alert show];
 //    [alert release];
-    NewsListViewController *nsList = [[NewsListViewController alloc]init];
-    [[self window]addSubview:[nsList view]];
+    //NewsListViewController *nsList = [[NewsListViewController alloc]init];
+//    [[self window]addSubview:[nsList view]];
+    
+    NSMutableArray *list = [jsonReader newsList:@"ggg"];
+    if(!list){
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Error"
+                              message: @"Failed to read data from news server"
+                              delegate: self
+                              cancelButtonTitle:@"Cancel"
+                              otherButtonTitles:@"Retry",nil];
+        
+        [alert show];
+        [alert release];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if (buttonIndex == 0) {
+		NSLog(@"user pressed OK");
+	}
+	else {
+		NSLog(@"user pressed Cancel");
+	}
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

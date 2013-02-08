@@ -12,28 +12,36 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmO-WY-flx">
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <accessibility key="accessibilityConfiguration" label="Progress"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="su9-pk-alA"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="rss.png" translatesAutoresizingMaskIntoConstraints="NO" id="Smh-VQ-kug">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="usD-hM-FIT"/>
+                                    <constraint firstAttribute="height" constant="128" id="W1M-O9-C0O"/>
+                                    <constraint firstAttribute="width" constant="128" id="glr-y0-Cw6"/>
                                 </constraints>
-                            </progressView>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="MSM-0O-SO8"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="jmO-WY-flx" secondAttribute="bottom" constant="35" id="YQg-gO-DhD"/>
-                            <constraint firstItem="jmO-WY-flx" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="kad-m8-fTO"/>
+                            <constraint firstItem="su9-pk-alA" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="3dE-1d-xuq"/>
+                            <constraint firstItem="su9-pk-alA" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="6RU-Dz-hfd"/>
+                            <constraint firstItem="su9-pk-alA" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="7Uj-Gr-gRb"/>
+                            <constraint firstItem="MSM-0O-SO8" firstAttribute="centerX" secondItem="su9-pk-alA" secondAttribute="centerX" type="default" id="Iyg-Xx-7Df"/>
+                            <constraint firstItem="MSM-0O-SO8" firstAttribute="centerY" secondItem="su9-pk-alA" secondAttribute="centerY" type="default" id="aiV-Ed-NQn"/>
+                            <constraint firstItem="su9-pk-alA" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="eD2-rX-iPa"/>
+                            <constraint firstItem="Smh-VQ-kug" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kOC-gl-YOd"/>
+                            <constraint firstAttribute="bottom" secondItem="Smh-VQ-kug" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="zDJ-eW-l8w"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="progress" destination="jmO-WY-flx" id="Sg9-Cc-0yy"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.png" width="640" height="960"/>
+        <image name="rss.png" width="256" height="256"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
