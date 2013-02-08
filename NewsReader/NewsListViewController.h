@@ -13,7 +13,7 @@
     IBOutlet UITableView *tblSimpleTable;
     NSMutableArray *tblDataSource;
 }
-
+@property (assign) UITableView *tblSimpleTable;
 @property (assign) NSMutableArray *tblDataSource;
 
 @end

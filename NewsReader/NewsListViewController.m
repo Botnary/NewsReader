@@ -15,7 +15,7 @@
 @end
 
 @implementation NewsListViewController
-@synthesize tblDataSource;
+@synthesize tblDataSource,tblSimpleTable;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +32,9 @@
     // Do any additional setup after loading the view from its nib.
     NSMutableArray *list = [[NSMutableArray alloc]initWithObjects:[[NewsItem alloc]initWith:@"Hello word" :@"test description" :@"Test content"],[[NewsItem alloc]initWith:@"Hello word 2" :@"test description 2" :@"Test content 2"], nil];
     tblDataSource = list;
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
+    self.tblSimpleTable.backgroundColor = background;
+    [background release];
     NSLog(@"@%d",[tblDataSource count]);
 }
 
@@ -65,6 +68,9 @@
     }
     
     // Configure the cell...
+    UIImage *placeholder = [UIImage imageNamed:@"newspaper_go.png"];
+    [cell.imageView setImage:placeholder];
+    //[cell.imageView setImageWithURL:[NSURL URLWithString:fd.imageUrl_]];
     NewsItem *item = [tblDataSource objectAtIndex:indexPath.row];
     cell.textLabel.text = [item headline];
     return cell;

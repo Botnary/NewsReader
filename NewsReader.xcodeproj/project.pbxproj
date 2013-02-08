@@ -12,6 +12,10 @@
 		2E426EE316C3427F000133BA /* NewsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E426EE116C3427F000133BA /* NewsListViewController.xib */; };
 		2E426EF016C34EE1000133BA /* ShowItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E426EEE16C34EE1000133BA /* ShowItemViewController.m */; };
 		2E426EF116C34EE1000133BA /* ShowItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */; };
+		2E96CAD816C46BB800FA3444 /* newspaper_go.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E96CAD716C46BB800FA3444 /* newspaper_go.png */; };
+		2E96CADD16C46FBC00FA3444 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E96CADC16C46FBC00FA3444 /* close.png */; };
+		2E96CADE16C46FDD00FA3444 /* 02ac5f8836b8943b00056542e2d63ded.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E96CADA16C46EC500FA3444 /* 02ac5f8836b8943b00056542e2d63ded.png */; };
+		2E96CAE216C474B000FA3444 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E96CAE116C474B000FA3444 /* bg.png */; };
 		2EDE1EB916C1CB5500B108C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDE1EB816C1CB5500B108C8 /* UIKit.framework */; };
 		2EDE1EBB16C1CB5500B108C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDE1EBA16C1CB5500B108C8 /* Foundation.framework */; };
 		2EDE1EBD16C1CB5500B108C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDE1EBC16C1CB5500B108C8 /* CoreGraphics.framework */; };
@@ -49,6 +53,10 @@
 		2E426EED16C34EE1000133BA /* ShowItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowItemViewController.h; sourceTree = "<group>"; };
 		2E426EEE16C34EE1000133BA /* ShowItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowItemViewController.m; sourceTree = "<group>"; };
 		2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowItemViewController.xib; sourceTree = "<group>"; };
+		2E96CAD716C46BB800FA3444 /* newspaper_go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newspaper_go.png; sourceTree = "<group>"; };
+		2E96CADA16C46EC500FA3444 /* 02ac5f8836b8943b00056542e2d63ded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02ac5f8836b8943b00056542e2d63ded.png; sourceTree = "<group>"; };
+		2E96CADC16C46FBC00FA3444 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		2E96CAE116C474B000FA3444 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		2EDE1EB416C1CB5500B108C8 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDE1EB816C1CB5500B108C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2EDE1EBA16C1CB5500B108C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +108,7 @@
 		2E426EF216C360CE000133BA /* ShowItem */ = {
 			isa = PBXGroup;
 			children = (
+				2E96CADC16C46FBC00FA3444 /* close.png */,
 				2E426EED16C34EE1000133BA /* ShowItemViewController.h */,
 				2E426EEE16C34EE1000133BA /* ShowItemViewController.m */,
 				2E426EEF16C34EE1000133BA /* ShowItemViewController.xib */,
@@ -110,7 +119,9 @@
 		2E426EF316C360EB000133BA /* NewsList */ = {
 			isa = PBXGroup;
 			children = (
+				2E96CAE116C474B000FA3444 /* bg.png */,
 				2E426EDF16C3427F000133BA /* NewsListViewController.h */,
+				2E96CAD716C46BB800FA3444 /* newspaper_go.png */,
 				2E426EE016C3427F000133BA /* NewsListViewController.m */,
 				2E426EE116C3427F000133BA /* NewsListViewController.xib */,
 			);
@@ -120,6 +131,7 @@
 		2EDE1EA916C1CB5500B108C8 = {
 			isa = PBXGroup;
 			children = (
+				2E96CADA16C46EC500FA3444 /* 02ac5f8836b8943b00056542e2d63ded.png */,
 				2EDE1EBE16C1CB5500B108C8 /* NewsReader */,
 				2EDE1EE216C1CB5600B108C8 /* NewsReaderTests */,
 				2EDE1EB716C1CB5500B108C8 /* Frameworks */,
@@ -275,6 +287,10 @@
 				2EDE1ED216C1CB5600B108C8 /* MainStoryboard.storyboard in Resources */,
 				2E426EE316C3427F000133BA /* NewsListViewController.xib in Resources */,
 				2E426EF116C34EE1000133BA /* ShowItemViewController.xib in Resources */,
+				2E96CAD816C46BB800FA3444 /* newspaper_go.png in Resources */,
+				2E96CADD16C46FBC00FA3444 /* close.png in Resources */,
+				2E96CADE16C46FDD00FA3444 /* 02ac5f8836b8943b00056542e2d63ded.png in Resources */,
+				2E96CAE216C474B000FA3444 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
