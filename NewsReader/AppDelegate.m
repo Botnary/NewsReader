@@ -55,8 +55,8 @@
 //    [alert release];
     //NewsListViewController *nsList = [[NewsListViewController alloc]init];
 //    [[self window]addSubview:[nsList view]];
-    
-    NSMutableArray *list = [jsonReader newsList:@"ggg"];
+    jsonReader = [[NewsJSON alloc]init];
+    NSMutableArray *list = [jsonReader newsList:@"https://raw.github.com/Botnary/NewsReader/master/NewsReader/news-test.json"];
     if(!list){
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle: @"Error"
@@ -67,6 +67,10 @@
         
         [alert show];
         [alert release];
+    }else{
+        //NSLog(@"@%@",list);
+        NewsListViewController *nsList = [[NewsListViewController alloc]initWithNewsList:list];
+        [[self window]addSubview:[nsList view]];
     }
 }
 

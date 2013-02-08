@@ -17,6 +17,11 @@
 @implementation NewsListViewController
 @synthesize tblDataSource,tblSimpleTable;
 
+-(id)initWithNewsList:(NSMutableArray *)theNewsList{
+    self.tblDataSource = theNewsList;
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,12 +35,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSMutableArray *list = [[NSMutableArray alloc]initWithObjects:[[NewsItem alloc]initWith:@"Hello word" :@"test description" :@"Test content"],[[NewsItem alloc]initWith:@"Hello word 2" :@"test description 2" :@"Test content 2"], nil];
-    tblDataSource = list;
+    //NSMutableArray *list = [[NSMutableArray alloc]initWithObjects:[[NewsItem alloc]initWith:@"Hello word" :@"test description" :@"Test content"],[[NewsItem alloc]initWith:@"Hello word 2" :@"test description 2" :@"Test content 2"], nil];
+    //tblDataSource = list;
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     self.tblSimpleTable.backgroundColor = background;
     [background release];
-    NSLog(@"@%d",[tblDataSource count]);
+    //NSLog(@"@%d",[tblDataSource count]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"@%d",[tblDataSource count]);
+    //NSLog(@"@%d",[tblDataSource count]);
     return [tblDataSource count];
 }
 
@@ -80,12 +85,12 @@
     ShowItemViewController *showItem = [[ShowItemViewController alloc]initWithNewsItem:[tblDataSource objectAtIndex:indexPath.row]];
     showItem.delegate = self;
     [[self view]addSubview:showItem.view];
-    NSLog(@"@%d",indexPath.row);
+    //NSLog(@"@%d",indexPath.row);
 }
 
 -(void) closeView:(ShowItemViewController *)theController{
     [theController.view removeFromSuperview];
-    NSLog(@"Working");
+    //NSLog(@"Working");
 }
 
 @end

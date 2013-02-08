@@ -16,4 +16,5 @@
 @property (assign) UITableView *tblSimpleTable;
 @property (assign) NSMutableArray *tblDataSource;
 
+-(id)initWithNewsList:(NSMutableArray *)theNewsList;
 @end
