@@ -9,9 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController{
-   IBOutlet UIProgressView * progress;
+    IBOutlet UIActivityIndicatorView * loginIndicator;
+    IBOutlet UITextField * fieldLogin;
+    IBOutlet UITextField * fieldPassword;
 }
-@property (retain) UIProgressView *progress;
 
--(void)updateProgress:(float)theIndex;
+@property (assign) IBOutlet UIActivityIndicatorView * loginIndicator; 
+@property (assign) IBOutlet UITextField * fieldLogin;
+@property (assign) IBOutlet UITextField * fieldPassword;
+
+-(IBAction)loginButtonCliked:(UIButton *)theButton;
+-(IBAction)backgroundClick:(id)sender;
+
 @end
+

@@ -12,7 +12,7 @@
     
 }
 
--(NSData *)read:(NSString*)theUrl;
--(NSMutableArray *)newsList:(NSString *)theUrl;
+-(NSData *)downloadFromUrl:(NSString*)theUrl;
+-(NSMutableArray *)getNewsFromUrl:(NSString *)theUrl;
 
 @end

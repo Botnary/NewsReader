@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 Constantin Botnari. All rights reserved.
 //
 
-#import "NewsJSON.h"
+
 #include "JSONKit.h"
+#import "NewsJSON.h"
 #include "NewsItem.h"
 
 @implementation NewsJSON
 
--(NSData *)read:(NSString*)theUrl{
+-(NSData *)downloadFromUrl:(NSString*)theUrl{
     NSURL *url = [NSURL URLWithString:theUrl];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
     [req setHTTPMethod:@"GET"];
@@ -36,21 +37,17 @@
     }
 }
 
--(NSMutableArray *)newsList:(NSString *)theUrl{
-    NSData *data = [self read:theUrl];
+-(NSMutableArray *)getNewsFromUrl:(NSString *)theUrl{
+    NSData *data = [self downloadFromUrl:theUrl];
     if(!data) return nil;
     JSONDecoder* decoder = [[JSONDecoder alloc] init];
     NSDictionary* listDictionary = [decoder objectWithData:data];
     NSArray* news =[listDictionary objectForKey:@"news"];
-    NSMutableArray *list = [NSMutableArray arrayWithCapacity:[news count]+1];
+    NSMutableArray *list = [[NSMutableArray alloc]init];
     
     for (NSDictionary *item in news) {
         NSDictionary *itemDetails = [item objectForKey:@"item"];
         NewsItem *item = [[NewsItem alloc]initWith:[itemDetails objectForKey:@"headline"] :[itemDetails objectForKey:@"description"] :[itemDetails objectForKey:@"content"]];
-        //NSLog(@"@%@",itemDetails);
-        NSLog(@"HEADLINE: @%@",[itemDetails objectForKey:@"headline"]);
-        //NSLog(@"DESCRIPTION: @%@",[itemDetails objectForKey:@"description"]);
-        //NSLog(@"CONTENT: @%@",[itemDetails objectForKey:@"content"]);
         [list addObject:item];
     }
     return list;

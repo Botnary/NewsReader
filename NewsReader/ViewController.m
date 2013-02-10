@@ -15,36 +15,38 @@
 
 @implementation ViewController
 
-@synthesize progress;
+@synthesize loginIndicator,fieldLogin,fieldPassword;
 
--(void)updateProgress:(float)theIndex{
-    NSLog(@"@%f",theIndex);
-    [progress setProgress:theIndex];
+-(IBAction)loginButtonCliked:(UIButton *)theButton{
+    [loginIndicator setHidden:NO];
 }
 
-//-(void)onTick:(NSTimer *)timer {
-//    float p = [progress progress];
-//    if(p >= 1){
-//        p = 0;
-//    }else{
-//        p += 0.1;
-//    }
-//    [self performSelectorOnMainThread:@selector(updateProgress:) withObject:[NSNumber numberWithFloat:p] waitUntilDone:NO];
-//    NSLog(@"@%f",p);
-//}
+-(IBAction)backgroundClick:(id)sender{
+    [fieldLogin resignFirstResponder];
+    [fieldPassword resignFirstResponder];
+    NSLog(@"Click bg");
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    //NSLog(@"este");
-    //[progress setProgress:0];
-//    NSTimer * myTimer = [NSTimer scheduledTimerWithTimeInterval: 5.0
-//                                                         target: self
-//                                                       selector:@selector(onTick:)
-//                                                       userInfo: nil repeats:YES];
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg-dark.png"]];
+    self.view.backgroundColor = background;
+    [background release];
     
-    //[myTimer invalidate];
+//    UIColor *backgroundTxtField = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"textfield.png"]];
+//    fieldLogin.backgroundColor = backgroundTxtField;
+//    fieldPassword.backgroundColor = backgroundTxtField;
+//    [backgroundTxtField release];
+    UIView *paddingViewLogin = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 20)] autorelease];
+    UIView *paddingViewPwd = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 20)] autorelease];
+    fieldLogin.leftView = paddingViewLogin;
+    fieldLogin.leftViewMode = UITextFieldViewModeAlways;
+    fieldPassword.leftView = paddingViewPwd;
+    fieldPassword.leftViewMode = UITextFieldViewModeAlways;
+    
+    [loginIndicator setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning

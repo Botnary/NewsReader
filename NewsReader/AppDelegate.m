@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #include "ViewController.h"
-#include "NewsListViewController.h"
 
 @implementation AppDelegate
 @synthesize myTimer,jsonReader;
@@ -55,23 +54,6 @@
 //    [alert release];
     //NewsListViewController *nsList = [[NewsListViewController alloc]init];
 //    [[self window]addSubview:[nsList view]];
-    jsonReader = [[NewsJSON alloc]init];
-    NSMutableArray *list = [jsonReader newsList:@"https://raw.github.com/Botnary/NewsReader/master/NewsReader/news-test.json"];
-    if(!list){
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle: @"Error"
-                              message: @"Failed to read data from news server"
-                              delegate: self
-                              cancelButtonTitle:@"Cancel"
-                              otherButtonTitles:@"Retry",nil];
-        
-        [alert show];
-        [alert release];
-    }else{
-        //NSLog(@"@%@",list);
-        NewsListViewController *nsList = [[NewsListViewController alloc]initWithNewsList:list];
-        [[self window]addSubview:[nsList view]];
-    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
