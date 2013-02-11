@@ -55,4 +55,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnLogin:(UIButton *)sender {
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"beeeeee");
+}
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    NSLog(@"%@ | %@",fieldLogin.text,fieldPassword.text);
+    if ([fieldLogin.text isEqualToString:@"demo"] && [fieldPassword.text isEqualToString:@"demo"]) {
+        [loginIndicator setHidden:YES];
+        return YES;
+    }
+    [loginIndicator setHidden:YES];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Your user name and password dowsn't match!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    [alert release];
+    return NO;
+}
 @end

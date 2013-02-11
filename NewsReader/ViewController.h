@@ -14,6 +14,7 @@
     IBOutlet UITextField * fieldPassword;
 }
 
+
 @property (assign) IBOutlet UIActivityIndicatorView * loginIndicator; 
 @property (assign) IBOutlet UITextField * fieldLogin;
 @property (assign) IBOutlet UITextField * fieldPassword;

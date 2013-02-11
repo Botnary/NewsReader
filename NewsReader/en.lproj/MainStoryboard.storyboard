@@ -65,6 +65,7 @@
                                 </state>
                                 <connections>
                                     <action selector="backgroundClick:" destination="2" eventType="touchUpInside" id="Ll5-o2-cQ0"/>
+                                    <action selector="btnLogin:" destination="2" eventType="touchUpInside" id="q7E-3k-D6D"/>
                                     <action selector="loginButtonCliked:" destination="2" eventType="touchUpInside" id="gsa-es-DGW"/>
                                     <segue destination="YVH-ys-F6R" kind="push" id="Fbh-0V-sXO"/>
                                 </connections>
