@@ -9,6 +9,7 @@
 #import "NewsTableViewController.h"
 #import "NewsJSON.h"
 #import "NewsItem.h"
+#import "ItemViewController.h"
 
 @interface NewsTableViewController ()
 
@@ -39,6 +40,7 @@
     NewsJSON * json = [[NewsJSON alloc]init];
     tblDataSource = [json getNewsFromUrl:@"https://raw.github.com/Botnary/NewsReader/master/NewsReader/news-test.json"];
     [json release];
+    self.title = @"News";
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,18 +116,37 @@
 }
 */
 
+//This doesnt work with the storyboards, but with XIB fiels only
+/*
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    ItemViewController *detailVC = [[ItemViewController alloc]init];
+    //datailVC.webContainer.loadHTMLString = @"";
+    NewsItem *item = [tblDataSource objectAtIndex:indexPath.row];
+    NSString *body = [[NSString alloc]initWithFormat:@"<h1>@%@</h1><p>@%@</p><p>@%@</p>",item.headline,item.description, item.content];
+    [detailVC.webContainer loadHTMLString:body baseURL:[NSURL URLWithString:@"#"]];
+    [self.navigationController pushViewController:detailVC animated:YES];
+    [detailVC release];
+    [body release];
+    [item release];
 }
+*/
 
+//This delegate works with sotryboard, and implements the prepareForSegue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    //create a index path
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NewsItem *item = [tblDataSource objectAtIndex:path.row];
+    ItemViewController *detailVC = [[ItemViewController alloc]initWithNewsItem:item];
+    //connect this view controller with the segue
+    detailVC = [segue destinationViewController];
+    detailVC.newsItem = item;
+    //[detailVC release];
+    //[body release];
+    //[item release];
+}
 @end

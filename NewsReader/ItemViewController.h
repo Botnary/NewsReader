@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsItem.h"
 
-@interface ItemViewController : UIViewController
+@interface ItemViewController : UIViewController{
+    IBOutlet UIWebView *webContainer;
+}
 
 @property (retain, nonatomic) IBOutlet UIWebView *webContainer;
+@property (retain, nonatomic) NewsItem *newsItem;
+
+-(id)initWithNewsItem:(NewsItem *)theNewsItem;
 @end

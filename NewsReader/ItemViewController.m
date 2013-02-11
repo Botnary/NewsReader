@@ -14,7 +14,12 @@
 
 @implementation ItemViewController
 
-@synthesize webContainer;
+@synthesize webContainer,newsItem;
+
+-(id)initWithNewsItem:(NewsItem *)theNewsItem{
+    self.newsItem = theNewsItem;
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +34,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [webContainer loadHTMLString:@"<h1>Test</h2>" baseURL:[NSURL URLWithString:@"#"]];
+    NSString *body = [[NSString alloc]initWithFormat:@"<h1>%@</h1><p>%@</p><p>%@</p>",newsItem.headline,newsItem.description, newsItem.content];
+    [webContainer loadHTMLString:body baseURL:[NSURL URLWithString:@"#"]];
+    self.title = newsItem.headline;
 }
 
 - (void)didReceiveMemoryWarning
